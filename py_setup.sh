@@ -21,10 +21,10 @@ for PYTHON_VER in 2.7.9 3.4.3; do
 	./configure && make && make install
 	rm -rf $PYTHON
 	if [ $PYTHON_VER = "2.7.9" ]; then
-		python -m ensurepip
-		python -m ensurepip --upgrade
+		sudo python -m ensurepip
+		sudo python -m ensurepip --upgrade
 	else 
-		python3 -m ensurepip
-		python3 -m ensurepip --upgrade
+		sudo python3 -m ensurepip
+		sudo python3 -m ensurepip --upgrade
 	fi
 done
