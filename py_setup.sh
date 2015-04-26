@@ -18,7 +18,7 @@ for PYTHON_VER in 2.7.9 3.4.3; do
 	wget https://www.python.org/ftp/python/$PYTHON_VER/Python-$PYTHON_VER.tar.xz
 	tar -xf $PYTHON.tar.xz && rm -rf $PYTHON.tar.xz
 	cd $PYTHON
-	./configure && make && make install
+	./configure && make && sudo make install
 	rm -rf $PYTHON
 	if [ $PYTHON_VER = "2.7.9" ]; then
 		sudo python -m ensurepip
